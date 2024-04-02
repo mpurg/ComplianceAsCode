@@ -15,7 +15,6 @@ selections:
     - enable_dconf_user_profile
     - dconf_gnome_banner_enabled
 
-    ### TODO
     # UBTU-22-271015 The Ubuntu operating system must display the Standard Mandatory DoD Notice and Consent Banner before granting local access to the system via a graphical user logon.
     - login_banner_text=dod_banners
     - dconf_gnome_login_banner_text
