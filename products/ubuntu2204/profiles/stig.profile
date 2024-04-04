@@ -78,14 +78,15 @@ selections:
     - sshd_idle_timeout_value=10_minutes
     - sshd_set_idle_timeout
 
+    # UBTU-22-255010 The Ubuntu operating system must use SSH to protect the confidentiality and integrity of transmitted information.
+    - package_openssh-server_installed
+
+    # UBTU-22-255015 The Ubuntu operating system must use SSH to protect the confidentiality and integrity of transmitted information.
+    - service_sshd_enabled
+
     # UBTU-22-255020 The Ubuntu operating system must display the Standard Mandatory DoD Notice and Consent Banner before granting any local or remote connection to the system.
     - banner_etc_issue_net
     - sshd_enable_warning_banner_net
-
-    # UBTU-22-255010 The Ubuntu operating system must use SSH to protect the confidentiality and integrity of transmitted information.
-    # UBTU-22-255015 The Ubuntu operating system must use SSH to protect the confidentiality and integrity of transmitted information.
-    - package_openssh-server_installed
-    - service_sshd_enabled
 
     ### TODO
     # UBTU-22-255060 The Ubuntu operating system must configure the SSH daemon to use Message Authentication Codes (MACs) employing FIPS 140-2 approved cryptographic hashes to prevent the unauthorized disclosure of information and/or detect changes to information during transmission.
