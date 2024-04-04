@@ -138,9 +138,10 @@ selections:
     - accounts_password_pam_dictcheck
 
     # UBTU-22-215010 The Ubuntu operating system must be configured so that when passwords are changed or new passwords are established, pwquality must be used.
+    - package_pam_pwquality_installed
+
     # UBTU-22-611045 The Ubuntu operating system must be configured so that when passwords are changed or new passwords are established, pwquality must be used.
     - var_password_pam_retry=3
-    - package_pam_pwquality_installed
     - accounts_password_pam_enforcing
     - accounts_password_pam_retry
 
