@@ -509,15 +509,12 @@ selections:
     # UBTU-22-251010 The Ubuntu operating system must have an application firewall installed in order to control remote access methods.
     - package_ufw_installed
 
-    ### REMOVED (duplicate)
-    # - service_ufw_enabled
-    # same as UBTU-20-010454
-    # UBTU-22-251020
+    # UBTU-22-215015 The Ubuntu operating system must have the "chrony" package installed
+    - package_chrony_installed
 
     ### TODO
     # UBTU-22-252010 The Ubuntu operating system must, for networked systems, compare internal information system clocks at least every 24 hours with a server which is synchronized to one of the redundant United States Naval Observatory (USNO) time servers, or a time server designated for the appropriate DoD network (NIPRNet/SIPRNet), and/or the Global Positioning System (GPS).
     - var_time_service_set_maxpoll=18_hours
-    - package_chrony_installed
     - chronyd_or_ntpd_set_maxpoll
 
     ### TODO
@@ -640,7 +637,6 @@ selections:
     # UBTU-22-215025 (ntp is not installed)
 
     ### TODO (rule needed)
-    # UBTU-22-215015 (chrony is not installed)
 
     ### TODO (rule needed)
     # UBTU-22-215020 (timesyncd is not installed)
