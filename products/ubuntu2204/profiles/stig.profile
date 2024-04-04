@@ -562,15 +562,12 @@ selections:
     # UBTU-22-214015 The Ubuntu operating system must be configured so that Advance Package Tool (APT) removes all software components after updated versions have been installed.
     - clean_components_post_updating
 
-    ### TODO
     # UBTU-22-651010 The Ubuntu operating system must use a file integrity tool to verify correct operation of all security functions.
-    # UBTU-22-651015 The Ubuntu operating system must use a file integrity tool to verify correct operation of all security functions.
     - package_aide_installed
-    - aide_build_database
 
-    ### REMOVED (duplicate)
-    # Same as UBTU-20-010437
-    # UBTU-22-651020
+    ### TODO
+    # UBTU-22-651015 The Ubuntu operating system must use a file integrity tool to verify correct operation of all security functions.
+    - aide_build_database
 
     ### TODO
     # UBTU-22-412015 The Ubuntu operating system must display the date and time of the last successful account logon upon logon.
