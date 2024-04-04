@@ -67,14 +67,14 @@ selections:
     - sshd_enable_pubkey_auth
     - smartcard_pam_enabled
 
-    # UBTU-22-255070 The Ubuntu operating system must use strong authenticators in establishing nonlocal maintenance and diagnostic sessions.
+    # UBTU-22-255065 The Ubuntu operating system must use strong authenticators in establishing nonlocal maintenance and diagnostic sessions.
     - sshd_enable_pam
 
-    # UBTU-22-255035 The Ubuntu operating system must immediately terminate all network connections associated with SSH traffic after a period of inactivity.
+    # UBTU-22-255030 The Ubuntu operating system must immediately terminate all network connections associated with SSH traffic after a period of inactivity.
     - var_sshd_set_keepalive=1
     - sshd_set_keepalive
 
-    # UBTU-22-255040 The Ubuntu operating system must immediately terminate all network connections associated with SSH traffic at the end of the session or after 10 minutes of inactivity.
+    # UBTU-22-255035 The Ubuntu operating system must immediately terminate all network connections associated with SSH traffic at the end of the session or after 10 minutes of inactivity.
     - sshd_idle_timeout_value=10_minutes
     - sshd_set_idle_timeout
 
@@ -89,24 +89,24 @@ selections:
     - sshd_enable_warning_banner_net
 
     ### TODO
-    # UBTU-22-255060 The Ubuntu operating system must configure the SSH daemon to use Message Authentication Codes (MACs) employing FIPS 140-2 approved cryptographic hashes to prevent the unauthorized disclosure of information and/or detect changes to information during transmission.
+    # UBTU-22-255055 The Ubuntu operating system must configure the SSH daemon to use Message Authentication Codes (MACs) employing FIPS 140-2 approved cryptographic hashes to prevent the unauthorized disclosure of information and/or detect changes to information during transmission.
     - sshd_use_approved_macs_ordered_stig
 
     ### TODO
-    # UBTU-22-255055 The Ubuntu operating system must configure the SSH daemon to use FIPS 140-2 approved ciphers to prevent the unauthorized disclosure of information and/or detect changes to information during transmission.
+    # UBTU-22-255050 The Ubuntu operating system must configure the SSH daemon to use FIPS 140-2 approved ciphers to prevent the unauthorized disclosure of information and/or detect changes to information during transmission.
     - sshd_use_approved_ciphers_ordered_stig
 
-    # UBTU-22-255065 The Ubuntu operating system SSH server must be configured to use only FIPS-validated key exchange algorithms.
+    # UBTU-22-255060 The Ubuntu operating system SSH server must be configured to use only FIPS-validated key exchange algorithms.
     - sshd_use_approved_kex_ordered_stig
 
-    # UBTU-22-255030 The Ubuntu operating system must not allow unattended or automatic login via SSH.
+    # UBTU-22-255025 The Ubuntu operating system must not allow unattended or automatic login via SSH.
     - sshd_disable_empty_passwords
     - sshd_do_not_permit_user_env
 
-    # UBTU-22-255045 The Ubuntu operating system must be configured so that remote X connections are disabled, unless to fulfill documented and validated mission requirements.
+    # UBTU-22-255040 The Ubuntu operating system must be configured so that remote X connections are disabled, unless to fulfill documented and validated mission requirements.
     - sshd_disable_x11_forwarding
 
-    # UBTU-22-255050 The Ubuntu operating system SSH daemon must prevent remote hosts from connecting to the proxy display.
+    # UBTU-22-255045 The Ubuntu operating system SSH daemon must prevent remote hosts from connecting to the proxy display.
     - sshd_x11_use_localhost
 
     # UBTU-22-611010 The Ubuntu operating system must enforce password complexity by requiring that at least one upper-case character be used.
@@ -631,9 +631,6 @@ selections:
 
     # UBTU-22-611060 The Ubuntu operating system must not allow accounts configured with blank or null passwords.
     - no_empty_passwords
-
-    ### TODO (rule needed)
-    # UBTU-22-255025 (DoD banner when connecting to ssh)
 
     ### TODO (rule needed)
     # UBTU-22-271025 (lock screen after 15 minutes)
