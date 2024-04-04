@@ -9,8 +9,6 @@ description: |-
     Technology (NIST) 800-53 and related documents.
 
 selections:
-    # UBTU-22-411040 The Ubuntu operating system must provision temporary user accounts with an expiration time of 72 hours or less.
-    - account_temp_expire_date
 
     ### TODO
     # UBTU-22-271010 The Ubuntu operating system must enable the graphical user logon banner to display the Standard Mandatory DoD Notice and Consent Banner before granting local access to the system via a graphical user logon.
@@ -164,7 +162,7 @@ selections:
     - var_password_pam_unix_remember=5
     - accounts_password_pam_unix_remember
 
-    # UBTU-22-411050 The Ubuntu operating system must automatically lock an account until the locked account is released by an administrator when three unsuccessful logon attempts have been made.
+    # UBTU-22-411045 The Ubuntu operating system must automatically lock an account until the locked account is released by an administrator when three unsuccessful logon attempts have been made.
     - var_accounts_passwords_pam_faillock_deny=3
     - var_accounts_passwords_pam_faillock_fail_interval=900
     - var_accounts_passwords_pam_faillock_unlock_time=never
@@ -348,9 +346,6 @@ selections:
     # UBTU-22-232110 The Ubuntu operating system must configure audit tools to be owned by root.
     - file_ownership_audit_binaries
 
-    ### REMOVED
-    # - file_groupownership_audit_binaries
-
     # UBTU-22-651030 The Ubuntu operating system must use cryptographic mechanisms to protect the integrity of audit tools.
     - aide_check_audit_tools
 
@@ -414,7 +409,6 @@ selections:
     - var_accounts_max_concurrent_login_sessions=10
     - accounts_max_concurrent_login_sessions
 
-    #UBTU-20-010401 The Ubuntu operating system must restrict access to the kernel message buffer.
     # UBTU-22-213010 The Ubuntu operating system must restrict access to the kernel message buffer.
     - sysctl_kernel_dmesg_restrict
 
@@ -440,11 +434,9 @@ selections:
     # UBTU-22-411035 The Ubuntu operating system must disable account identifiers (individuals, groups, roles, and devices) after 35 days of inactivity.
     - account_disable_post_pw_expiration
 
-    ### TODO (same rule but has improved grep)
-    # UBTU-22-411045 The Ubuntu operating system must automatically remove or disable emergency accounts after 72 hours.
-    # same as UBTU-20-010000
-    # UBTU-22-411040
-    # - account_temp_expire_date
+    ### TODO
+    # UBTU-22-411040 The Ubuntu operating system must provision temporary user accounts with an expiration time of 72 hours or less.
+    - account_temp_expire_date
 
     # UBTU-22-232145 The Ubuntu operating system must set a sticky bit  on all public directories to prevent unauthorized and unintended information transferred via shared system resources.
     - dir_perms_world_writable_sticky_bits
