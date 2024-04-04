@@ -299,9 +299,6 @@ selections:
     # UBTU-22-654015 The Ubuntu operating system must generate audit records for successful/unsuccessful uses of the chacl command.
     - audit_rules_execution_chacl
 
-    ### REMOVED
-    # - audit_rules_login_events_tallylog
-
     # UBTU-22-654210 The Ubuntu operating system must generate audit records for the use and modification of faillog file.
     - audit_rules_login_events_faillog
 
@@ -336,9 +333,10 @@ selections:
     # UBTU-22-654170 The Ubuntu operating system must generate audit records for successful/unsuccessful uses of the delete_module syscall
     - audit_rules_kernel_module_loading_delete
 
-    # UBTU-22-653010 The Ubuntu operating system must produce audit records and reports containing information to establish when, where, what type, the source, and the outcome for all DoD-defined auditable events and actions in near real time.
-    # UBTU-22-653015 The Ubuntu operating system must produce audit records and reports containing information to establish when, where, what type, the source, and the outcome for all DoD-defined auditable events and actions in near real time.
+    # UBTU-22-653010 The Ubuntu operating system must have the "auditd" package installed
     - package_audit_installed
+
+    # UBTU-22-653015 The Ubuntu operating system must produce audit records and reports containing information to establish when, where, what type, the source, and the outcome for all DoD-defined auditable events and actions in near real time.
     - service_auditd_enabled
 
     # UBTU-22-212015 The Ubuntu operating system must initiate session audits at system start-up.
