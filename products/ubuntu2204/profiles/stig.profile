@@ -529,8 +529,9 @@ selections:
     - apt_conf_disallow_unauthenticated
 
     # UBTU-22-431010 The Ubuntu operating system must be configured to use AppArmor.
-    # UBTU-22-431015 The Ubuntu operating system must be configured to use AppArmor.
     - package_apparmor_installed
+
+    # UBTU-22-431015 The Ubuntu operating system must be configured to use AppArmor.
     - apparmor_configured
 
     # UBTU-22-411020 The Ubuntu operating system must allow the use of a temporary password for system logons with an immediate change to a permanent password.
@@ -546,15 +547,6 @@ selections:
     ### TODO
     # UBTU-22-631010 The Ubuntu operating system must only allow the use of DoD PKI-established certificate authorities for verification of the establishment of protected sessions.
     - only_allow_dod_certs
-
-    ### REMOVED (duplicate)
-    # same as UBTU-20-010414
-    # UBTU-22-231010
-
-    ### REMOVED (duplicate)
-    # Needs rule
-    # same as UBTU-20-010414 and UBTU-20-010444
-    # UBTU-22-231010 and UBTU-20-010444
 
     ### TODO
     # UBTU-22-251025 The Ubuntu operating system must configure the uncomplicated firewall to rate-limit impacted network interfaces.
