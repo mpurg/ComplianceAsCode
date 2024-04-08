@@ -12,6 +12,7 @@ selections:
 
     ### TODO
     # UBTU-22-271010 The Ubuntu operating system must enable the graphical user logon banner to display the Standard Mandatory DoD Notice and Consent Banner before granting local access to the system via a graphical user logon.
+    - enable_dconf_user_profile
     - dconf_gnome_banner_enabled
 
     ### TODO
@@ -611,7 +612,11 @@ selections:
     - no_empty_passwords
 
     ### TODO (rule needed)
-    # UBTU-22-271025 (lock screen after 15 minutes)
+    # UBTU-22-271025 must initiate a graphical session lock after 15 minutes of inactivity
+    - inactivity_timeout_value=15_minutes
+    - var_screensaver_lock_delay=immediate
+    - dconf_gnome_screensaver_lock_delay
+    - dconf_gnome_screensaver_idle_delay
 
     ### TODO (rule needed)
     # UBTU-22-654220 (audit events for sudoers.d)
