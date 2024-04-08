@@ -611,16 +611,18 @@ selections:
     # UBTU-22-611060 The Ubuntu operating system must not allow accounts configured with blank or null passwords.
     - no_empty_passwords
 
-    ### TODO (rule needed)
+    ### TODO (fix dconf issues)
     # UBTU-22-271025 must initiate a graphical session lock after 15 minutes of inactivity
     - inactivity_timeout_value=15_minutes
     - var_screensaver_lock_delay=immediate
     - dconf_gnome_screensaver_lock_delay
     - dconf_gnome_screensaver_idle_delay
 
-    ### TODO (rule needed)
-    # UBTU-22-654220 (audit events for sudoers.d)
-    # UBTU-22-654225 (audit events for sudoers.d)
+    # UBTU-22-654220 The Ubuntu operating system must generate audit records when successful/unsuccessful attempts to modify the /etc/sudoers file occur
+    - audit_rules_sudoers
+
+    # UBTU-22-654225 The Ubuntu operating system must generate audit records when successful/unsuccessful attempts to modify the /etc/sudoers.d directory occur
+    - audit_rules_sudoers_d
 
     ### TODO (rule needed)
     # UBTU-22-611055 (sha512 is used for storing passwords)
