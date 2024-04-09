@@ -489,9 +489,6 @@ selections:
     # UBTU-22-232020 The Ubuntu operating system library files must have mode 0755 or less permissive.
     - file_permissions_library_dirs
 
-    ### REMOVED
-    # - dir_permissions_library_dirs
-
     # UBTU-22-232070 The Ubuntu operating system library files must be owned by root.
     - file_ownership_library_dirs
 
@@ -633,34 +630,42 @@ selections:
     # UBTU-22-654190 The Ubuntu operating system must generate audit records for all events that affect the systemd journal files
 
     ### TODO (rule needed)
+    # Analogous to package_telnetd_removed
     # UBTU-22-215025 The Ubuntu operating system must not have the "ntp" package installed
 
     ### TODO (rule needed)
-
-    ### TODO (rule needed)
+    # Analogous to package_telnetd_removed
     # UBTU-22-215020 The Ubuntu operating system must not have the "systemd-timesyncd" package installed
 
-    ### TODO (rule needed)
+    ### TODO (rule needed; reevaluate permissions)
+    # Similar to file_permissions_library_dirs and dir_permissions_library_dirs
     # UBTU-22-232027 The Ubuntu operating system must generate system journal entries without revealing information that could be exploited by adversaries
 
     ### TODO (rule needed)
+    # Analogous to directory_ownership_var_log_audit
     # UBTU-22-232080 The Ubuntu operating system must configure the directories used by the system journal to be owned by "root"
 
     ### TODO (rule needed)
+    # Analogous to directory_group_ownership_var_log_audit
     # UBTU-22-232085 The Ubuntu operating system must configure the directories used by the system journal to be group-owned by "systemd-journal"
 
     ### TODO (rule needed)
+    # Analogous to file_ownership_var_log_audit
     # UBTU-22-232090 The Ubuntu operating system must configure the files used by the system journal to be owned by "root"
 
     ### TODO (rule needed)
+    # Analogous to file_group_ownership_var_log_audit
     # UBTU-22-232095 The Ubuntu operating system must configure the files used by the system journal to be group-owned by "systemd-journal"
 
     ### TODO (rule needed)
+    # Similar to file_ownership_var_log_audit
     # UBTU-22-232100 The Ubuntu operating system must be configured so that the "journalctl" command is owned by "root"
 
     ### TODO (rule needed)
+    # Similar to file_group_ownership_var_log_audit
     # UBTU-22-232105 The Ubuntu operating system must be configured so that the "journalctl" command is group-owned by "root"
 
     ### TODO (rule needed)
+    # Similar to file_permissions_var_log_audit
     # UBTU-22-232140 The Ubuntu operating system must be configured so that the "journalctl" command is not accessible by unauthorized users
 
