@@ -88,11 +88,11 @@ selections:
     - sshd_enable_warning_banner_net
 
     ### TODO
-    # UBTU-22-255055 The Ubuntu operating system must configure the SSH daemon to use Message Authentication Codes (MACs) employing FIPS 140-2 approved cryptographic hashes to prevent the unauthorized disclosure of information and/or detect changes to information during transmission.
+    # UBTU-22-255055 The Ubuntu operating system must configure the SSH daemon to use Message Authentication Codes (MACs) employing FIPS 140-3 approved cryptographic hashes to prevent the unauthorized disclosure of information and/or detect changes to information during transmission.
     - sshd_use_approved_macs_ordered_stig
 
     ### TODO
-    # UBTU-22-255050 The Ubuntu operating system must configure the SSH daemon to use FIPS 140-2 approved ciphers to prevent the unauthorized disclosure of information and/or detect changes to information during transmission.
+    # UBTU-22-255050 The Ubuntu operating system must configure the SSH daemon to use FIPS 140-3 approved ciphers to prevent the unauthorized disclosure of information and/or detect changes to information during transmission.
     - sshd_use_approved_ciphers_ordered_stig
 
     # UBTU-22-255060 The Ubuntu operating system SSH server must be configured to use only FIPS-validated key exchange algorithms.
@@ -417,7 +417,7 @@ selections:
     # UBTU-22-652015 The Ubuntu operating system must monitor remote access methods.
     - rsyslog_remote_access_monitoring
 
-    # UBTU-22-611070 The Ubuntu operating system must encrypt all stored passwords with a FIPS 140-2 approved cryptographic hashing algorithm.
+    # UBTU-22-611070 The Ubuntu operating system must encrypt all stored passwords with a FIPS 140-3 approved cryptographic hashing algorithm.
     - set_password_hashing_algorithm_logindefs
 
     # UBTU-22-215035 The Ubuntu operating system must not have the telnet package installed.
@@ -624,8 +624,9 @@ selections:
     # UBTU-22-654225 The Ubuntu operating system must generate audit records when successful/unsuccessful attempts to modify the /etc/sudoers.d directory occur
     - audit_rules_sudoers_d
 
-    ### TODO (rule needed)
-    # UBTU-22-611055 (sha512 is used for storing passwords)
+    ### TODO (rule needed; reevaluate requirement)
+    # Analogous to set_password_hashing_algorithm_passwordauth
+    # UBTU-22-611055 The Ubuntu operating system must store only encrypted representations of passwords
 
     ### TODO (rule needed)
     # UBTU-22-654190 (audit events for /var/log/journal)
