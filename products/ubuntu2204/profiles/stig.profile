@@ -629,37 +629,38 @@ selections:
     # UBTU-22-611055 The Ubuntu operating system must store only encrypted representations of passwords
 
     ### TODO (rule needed)
-    # UBTU-22-654190 (audit events for /var/log/journal)
+    # Analogous to audit_rules_login_events_lastlog
+    # UBTU-22-654190 The Ubuntu operating system must generate audit records for all events that affect the systemd journal files
 
     ### TODO (rule needed)
-    # UBTU-22-215025 (ntp is not installed)
+    # UBTU-22-215025 The Ubuntu operating system must not have the "ntp" package installed
 
     ### TODO (rule needed)
 
     ### TODO (rule needed)
-    # UBTU-22-215020 (timesyncd is not installed)
+    # UBTU-22-215020 The Ubuntu operating system must not have the "systemd-timesyncd" package installed
 
     ### TODO (rule needed)
-    # UBTU-22-232027 (journald dirs have permission of 0640)
+    # UBTU-22-232027 The Ubuntu operating system must generate system journal entries without revealing information that could be exploited by adversaries
 
     ### TODO (rule needed)
-    # UBTU-22-232080 (journald dirs are owned by root)
+    # UBTU-22-232080 The Ubuntu operating system must configure the directories used by the system journal to be owned by "root"
 
     ### TODO (rule needed)
-    # UBTU-22-232085 (journald dirs are group-owned by systemd-journal)
+    # UBTU-22-232085 The Ubuntu operating system must configure the directories used by the system journal to be group-owned by "systemd-journal"
 
     ### TODO (rule needed)
-    # UBTU-22-232090 (journald files are owned by root)
+    # UBTU-22-232090 The Ubuntu operating system must configure the files used by the system journal to be owned by "root"
 
     ### TODO (rule needed)
-    # UBTU-22-232095 (journald files are group-owned by systemd-journal)
+    # UBTU-22-232095 The Ubuntu operating system must configure the files used by the system journal to be group-owned by "systemd-journal"
 
     ### TODO (rule needed)
-    # UBTU-22-232100 (journalctl is owned by root)
+    # UBTU-22-232100 The Ubuntu operating system must be configured so that the "journalctl" command is owned by "root"
 
     ### TODO (rule needed)
-    # UBTU-22-232105 (journalctl is group-ownder by root)
+    # UBTU-22-232105 The Ubuntu operating system must be configured so that the "journalctl" command is group-owned by "root"
 
     ### TODO (rule needed)
-    # UBTU-22-232140 (journalctl has permission of 0740)
+    # UBTU-22-232140 The Ubuntu operating system must be configured so that the "journalctl" command is not accessible by unauthorized users
 
