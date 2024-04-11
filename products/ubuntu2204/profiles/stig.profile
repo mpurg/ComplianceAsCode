@@ -634,9 +634,10 @@ selections:
     # UBTU-22-215025 The Ubuntu operating system must not have the "ntp" package installed
     - package_ntp_removed
 
-    ### TODO (rule needed; reevaluate permissions)
-    # Similar to file_permissions_library_dirs and dir_permissions_library_dirs
+    ### TODO (reevaluate directory permissions)
     # UBTU-22-232027 The Ubuntu operating system must generate system journal entries without revealing information that could be exploited by adversaries
+    - file_permissions_system_journal
+    - dir_permissions_system_journal
 
     ### TODO (rule needed)
     # Analogous to directory_ownership_var_log_audit
