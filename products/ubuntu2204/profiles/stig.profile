@@ -634,14 +634,14 @@ selections:
     # UBTU-22-215025 The Ubuntu operating system must not have the "ntp" package installed
     - package_ntp_removed
 
-    ### TODO (reevaluate directory permissions)
+    ### TODO (reevaluate directory permissions; incomplete remediation - tmpfiles.d)
     # UBTU-22-232027 The Ubuntu operating system must generate system journal entries without revealing information that could be exploited by adversaries
     - file_permissions_system_journal
     - dir_permissions_system_journal
 
-    ### TODO (rule needed)
-    # Analogous to directory_ownership_var_log_audit
+    ### TODO (incomplete remediation - tmpfiles.d)
     # UBTU-22-232080 The Ubuntu operating system must configure the directories used by the system journal to be owned by "root"
+    - dir_owner_system_journal
 
     ### TODO (rule needed)
     # Analogous to directory_group_ownership_var_log_audit
