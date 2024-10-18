@@ -406,6 +406,8 @@ class RuleChecker(oscap.Checker):
         return all_tests
 
     def _get_rule_test_content(self, rule):
+        if 'machine' in rule.rule.platforms:
+            return RuleTestContent([], {})
         checks = xml_operations.find_checks_in_rule(self.datastream, self.benchmark_id, rule.id)
         all_tests = self._load_all_tests(rule)
         scenarios = []
