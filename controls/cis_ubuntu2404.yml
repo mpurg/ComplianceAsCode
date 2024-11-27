@@ -1417,11 +1417,13 @@ controls:
     levels:
       - l1_server
       - l1_workstation
-    related_rules:
+    rules:
       - var_nftables_master_config_file=etc
       - nftables_rules_permanent
-    status: planned
-    notes: TODO. Partial/incorrect implementation exists.See related rules. Analogous to ubuntu2204/3.5.2.10.
+    status: manual
+    notes: |
+      Not possible to automate. nftables configuration
+      depends on local site policy.
 
   - id: 4.4.1.1
     title: Ensure iptables packages are installed (Automated)
